@@ -14,7 +14,12 @@ def has_teen?(a, b, c)
  end
 end
 # TODO - write not_string
-
+def not_string(str)
+	if str[0,3] == "not"
+		return str
+	end
+	return "not "+str
+end
 # TODO - write icy_hot?
 
 # TODO - write closer_to
