@@ -37,7 +37,14 @@ describe 'Methods' do
       icy_hot?(40, 107).must_equal(false)
     end
   end
-
+  describe 'closer_to' do
+    it "should test for the closest number to the target number 100 of 2 numbers" do
+      closer_to(99, 105).must_equal(99)
+    end
+    it "should return 0 if both numbers are the same" do
+      closer_to(105, 105).must_equal(0)
+    end
+  end
 
 
 
