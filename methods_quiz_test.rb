@@ -45,7 +45,17 @@ describe 'Methods' do
       closer_to(105, 105).must_equal(0)
     end
   end
-
+  describe 'two_as_one?' do
+    it "should test if two of three numbers can add up to be the third" do
+      two_as_one?(75, 25, 100).must_equal(true)
+    end
+    it "should test if two of three numbers can add up to be the third" do
+      two_as_one?(25, 25, 100).must_equal(false)
+    end
+    it "should test if two of three numbers can add up to be the third" do
+      two_as_one?(100, 25, 75).must_equal(true)
+    end
+  end
 
 
 
