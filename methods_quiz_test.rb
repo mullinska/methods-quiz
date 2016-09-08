@@ -56,7 +56,17 @@ describe 'Methods' do
       two_as_one?(100, 25, 75).must_equal(true)
     end
   end
-
+  describe 'pig_latinify' do
+    it "should move the first letter (if it is a consanant) to the end then add 'ay' or add 'way' if it is a vowel" do
+      pig_latinify("computer").must_equal("omputercay")
+    end
+    it "should move the first letter (if it is a consanant) to the end then add 'ay' or add 'way' if it is a vowel" do
+      pig_latinify("amazing").must_equal("amazingway")
+    end
+    it "should ignore whitespace" do
+      pig_latinify("     computer").must_equal("omputercay")
+    end
+  end
 
 
 end
