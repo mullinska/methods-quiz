@@ -23,7 +23,20 @@ describe 'Methods' do
       not_string("not this is a quiz").must_equal("not this is a quiz")
     end
   end
-
+  describe 'icy_hot?' do
+    it "should test if one of two temperatures is above 100, and the other is below 0" do
+      icy_hot?(-5, 107).must_equal(true)
+    end
+    it "should test if one of two temperatures is above 100, and the other is below 0" do
+      icy_hot?(-5, 10).must_equal(false)
+    end
+    it "should test if one of two temperatures is above 100, and the other is below 0" do
+      icy_hot?(50, 10).must_equal(false)
+    end
+    it "should test if one of two temperatures is above 100, and the other is below 0" do
+      icy_hot?(40, 107).must_equal(false)
+    end
+  end
 
 
 
